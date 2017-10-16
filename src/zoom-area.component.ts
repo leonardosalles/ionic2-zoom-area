@@ -1,12 +1,19 @@
 import { Component, ViewChild, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Gesture, Content } from 'ionic-angular';
 import { ZoomAreaProvider } from './zoom-area.provider';
-import { ZOOM_AREA_ANIMATIONS } from './zoom-area.animations';
 
 @Component({
  selector: 'zoom-area',
  templateUrl: 'zoom-area.html',
- animations: ZOOM_AREA_ANIMATIONS,
+ animations: [
+    trigger('visibilityChanged', [
+      state('shown', style({ opacity: 1, display: 'block' })),
+      state('hidden', style({ opacity: 0, display: 'none' })),
+      transition('shown => hidden', animate('300ms')),
+      transition('hidden => shown', animate('300ms')),
+    ])
+ ],
  styles: [
   `
   :host {
