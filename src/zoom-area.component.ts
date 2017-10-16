@@ -4,8 +4,8 @@ import { ZoomAreaProvider } from './zoom-area.provider';
 import { ZOOM_AREA_ANIMATIONS } from './zoom-area.animations';
 
 @Component({
- selector: 'sabemi-zoom-area',
- templateUrl: 'sabemi-zoom-area.html',
+ selector: 'zoom-area',
+ templateUrl: 'zoom-area.html',
  animations: ZOOM_AREA_ANIMATIONS,
  styles: [
   `
