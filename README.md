@@ -11,16 +11,12 @@ To see this in action, checkout the [example project here](https://github.com/le
 
 <br><br>
 
-![Example](https://github.com/leonardosalles/ionic2-zoom-area-example/blob/master/example.gif?raw=true)
-
-<br><br>
 
 - [Quick Example](#quick-example)
 - [Installation](#installation)
 - [Usage](#usage)
   - [`zoom-area` Component](#zoom-area-component)
 - [Examples](#examples)
-- [Project goals](#project-goals)
 
 <br><br><br>
 
