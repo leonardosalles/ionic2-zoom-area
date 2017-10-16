@@ -82,10 +82,10 @@ export class SharedModule {}
 ### Inputs
 
 #### scale
-_(optional)_ The scale of your initial zoom. Defaults to `1`.
+_(optional)_ _(two-way)_ The scale of your initial zoom. Defaults to `1`.
 
 #### controls
-_(optional)_ It allow you to hide or show zoom controls. Defaults to `true`.
+_(optional)_ _(two-way)_ It allow you to hide or show zoom controls. Defaults to `true`.
 
 
 ### Outputs
@@ -108,7 +108,7 @@ It broadcast an event when user scroll content inside zoom area.
 
 ### onScroll$
 ```ts
-onScroll$(): Observable
+onScroll$: Observable
 ```
 It allows you to listen for a scroll event inside your zoom area. You can use it to collapse you header for example.
 
@@ -126,10 +126,14 @@ this.zoomAreaProvider.onScroll$.subscribe(state => {
 
 ### scrollState$
 ```ts
-scrollState$(): Observable
+scrollState$: Observable
 ```
 It allows you to listen for a change in scroll state.
-
+```ts
+this.zoomAreaProvider.scrollState$.subscribe(state => {
+  console.log('Do whatever you want when scrollState change');
+});
+```
 # Examples
 
 ## Basic example
