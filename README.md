@@ -110,7 +110,7 @@ It broadcast an event when user scroll content inside zoom area.
 ```ts
 onScroll$(): Observable
 ```
-It allows you to listen for a scroll event inside your zoom area.
+It allows you to listen for a scroll event inside your zoom area. You can use it to collapse you header for example.
 
 ```ts
 this.zoomAreaProvider.onScroll$.subscribe(state => {
@@ -128,7 +128,7 @@ this.zoomAreaProvider.onScroll$.subscribe(state => {
 ```ts
 scrollState$(): Observable
 ```
-It allows you to listen for a change in scroll state, you can use it to collapse you header for example.
+It allows you to listen for a change in scroll state.
 
 # Examples
 
