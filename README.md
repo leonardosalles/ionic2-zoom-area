@@ -17,7 +17,6 @@ To see this in action, checkout the [example project here](https://github.com/le
 - [Usage](#usage)
   - [`zoom-area` Component](#zoom-area-component)
 - [Examples](#examples)
-- [Project goals](#project-goals)
 
 <br><br><br>
 
