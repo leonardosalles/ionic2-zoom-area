@@ -1,0 +1,21 @@
+zoom-area {
+    .zoom {
+        width: 100% !important;
+        height: 100% !important;
+        margin-bottom: 400px;
+        touch-action: pan-y !important;
+
+        div.fit {
+            width: 100% !important;
+            height: 100% !important;
+            touch-action: auto !important;
+        }
+    }
+
+    .btn-zoom {
+        width: 35px;
+        height: 35px !important;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
