@@ -51,7 +51,7 @@ import { ZoomAreaModule } from 'ionic2-zoom-area';
     imports: [
       ...
       ZoomAreaModule.forRoot()
-      ],
+    ],
     ...
 })
 export class AppModule {}
@@ -66,7 +66,7 @@ import { ZoomAreaModule } from 'ionic2-zoom-area';
     imports: [
       ...
       ZoomAreaModule
-      ],
+    ],
     ...
 })
 export class SharedModule {}
