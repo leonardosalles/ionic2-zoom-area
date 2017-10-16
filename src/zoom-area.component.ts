@@ -41,7 +41,6 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
     zoomControlsState;
     zoomRootElement;
     gesture;
-    isScrollSpyActive = true;
 
     constructor (
       public zoomAreaProvider: ZoomAreaProvider
