@@ -68,7 +68,6 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
       public zoomAreaProvider: ZoomAreaProvider
     ) {
       this.zoomControlsState = 'hidden';
-      this._pinchZoom(this.zoom.nativeElement, this.content);
     }
 
     ngOnChanges (changes: SimpleChanges) {
@@ -95,6 +94,8 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
       this.content.ionScroll.subscribe((data)=>{
         this.zoomAreaProvider.notifyScroll(data);
       });
+
+      this._pinchZoom(this.zoom.nativeElement, this.content);
     }
 
     zoomConfig = {
