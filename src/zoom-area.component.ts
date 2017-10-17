@@ -5,7 +5,7 @@ import { ZoomAreaProvider } from './zoom-area.provider';
 
 @Component({
  selector: 'zoom-area',
- templateUrl: 'zoom-area.html',
+ templateUrl: './zoom-area.html',
  animations: [
     trigger('visibilityChanged', [
       state('shown', style({ opacity: 1, display: 'block' })),
