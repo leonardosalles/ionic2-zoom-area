@@ -165,7 +165,9 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
   
     zoomReset () {
       this.zoomConfig.scale = 1;
-      this.content.scrollTop = 0;
+      if (this.content && this.content.scrollTop) {
+        this.content.scrollTop = 0;
+      }
       this.zoomOut(true);
     }
   

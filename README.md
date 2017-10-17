@@ -140,8 +140,10 @@ this.zoomAreaProvider.scrollState$.subscribe(state => {
 
 ## Example with methods
 ```html
-<zoom-area [scale]="scale" afterZoomIn="afterZoomIn($event)" afterZoomOut="afterZoomOut($event)">
-  <div>zoom it</div>
+<zoom-area [(scale)]="scale" (afterZoomIn)="afterZoomIn($event)" (afterZoomOut)="afterZoomOut($event)" [(controls)]="showControls">
+    <div>Zoom It</div>
+    or
+    <img src="assets/image-to-zoom.jpg" alt="Zoom It">
 </zoom-area>
 ```
 
