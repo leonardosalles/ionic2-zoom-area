@@ -1,6 +1,6 @@
 {
   "name": "ionic2-zoom-area",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A zoom area component with pinch support",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

@@ -5,7 +5,29 @@ import { ZoomAreaProvider } from './zoom-area.provider';
 
 @Component({
  selector: 'zoom-area',
- templateUrl: './zoom-area.html',
+ template: `
+    <ion-content>
+      <div #zoomAreaRoot class="zoom" (click)="toggleZoomControls()">
+          <div class="fit">
+              <ng-content></ng-content>
+          </div>
+      </div>
+
+      <ion-fab right top [@visibilityChanged]="zoomControlsState">
+          <button (click)="zoomIn()" ion-fab color="primary" class="btn-zoom">
+              <ion-icon name="add-circle"></ion-icon>
+          </button>
+
+          <button (click)="zoomOut()" ion-fab color="primary" class="btn-zoom">
+              <ion-icon name="remove-circle"></ion-icon>
+          </button>
+
+          <button (click)="zoomReset()" ion-fab color="primary" class="btn-zoom">
+              <ion-icon name="md-contract"></ion-icon>
+          </button>
+      </ion-fab>
+    </ion-content>
+`,
  animations: [
     trigger('visibilityChanged', [
       state('shown', style({ opacity: 1, display: 'block' })),
