@@ -123,9 +123,6 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
       this.zoomConfig.scale += 1;
   
       if (this.zoomConfig.scale > 1 && !this.gesture) {
-        this.onPinch({scale: 1});
-        this.onPinchend({scale: 1});
-
         this.zoomAreaProvider.notifyScrollState(this.zoomAreaProvider.SCROLL_STATE.COLAPSED);
       }
   
@@ -133,8 +130,10 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
         this.zoomConfig.scale = 4;
       }
   
+      this.onPinch({scale: 1});
+      this.onPinchend({scale: 1});
+
       this.transform();
-  
       this.afterZoomIn.emit();
     }
   
