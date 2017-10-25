@@ -1,6 +1,6 @@
-[![npm](https://img.shields.io/npm/l/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area.svg/)
-[![npm](https://img.shields.io/npm/dt/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area.svg)
-[![npm](https://img.shields.io/npm/dm/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area.svg)
+[![npm](https://img.shields.io/npm/l/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area)
+[![npm](https://img.shields.io/npm/dt/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area)
+[![npm](https://img.shields.io/npm/dm/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area)
 
 # A zoom area for Ionic 2
 
