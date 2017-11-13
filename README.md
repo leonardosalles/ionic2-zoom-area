@@ -8,6 +8,8 @@ A zoom area component with pinch support to zoom any element in page
 
 To see this in action, checkout the [example project here](https://github.com/leonardosalles/ionic2-zoom-area-example).
 
+IMPORTANT: This module requires Angular Animations and should be included in the app module.
+
 <br>
 
 ![Screenshot](app-screenshot.png?raw=true)
