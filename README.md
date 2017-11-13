@@ -38,6 +38,20 @@ To see this in action, checkout the [example project here](https://github.com/le
 <br><br><br>
 
 # Installation
+## Add Angular Animations
+```shell
+npm i --save @angular/animations
+```
+
+## Import BrowserAnimationsModule in your app's module(s)
+```ts
+imports: [
+  ...
+  BrowserAnimationsModule,
+  ...
+]
+```
+
 ## Install the module via NPM
 ```shell
 npm i --save ionic2-zoom-area
