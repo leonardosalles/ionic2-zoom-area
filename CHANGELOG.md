@@ -1,3 +1,11 @@
+<a name="1.0.11"></a>
+## 1.0.11 (2017-11-23)
+
+### Bug Fixes
+
+* **LazyLoading:**
+Closes [#8](https://github.com/leonardosalles/ionic2-zoom-area/issues/8) - Fix ZoomAreaProvider not available
+
 <a name="1.0.10"></a>
 ## 1.0.10 (2017-11-23)
 
