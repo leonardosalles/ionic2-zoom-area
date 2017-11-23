@@ -187,7 +187,7 @@ this.zoomAreaProvider.setCenter(20, 50);
 <br><br>
 
 ## Roadmap
-- Add support to move center of zoom
+- ✅(1.0.10) - Add support to move center of zoom
 
 <br><br>
 ## Contribution
