@@ -160,6 +160,17 @@ this.zoomAreaProvider.scrollState$.subscribe(state => {
   console.log('Do whatever you want when scrollState change');
 });
 ```
+
+### setCenter (x: number, y: number)
+```ts
+setCenter: Function
+```
+It allows you to change the position of the zoom manually if zoom scale is greather than 1.
+```ts
+this.zoomAreaProvider.setCenter(x, y);
+this.zoomAreaProvider.setCenter(20, 50);
+```
+
 # Examples
 
 ## Basic example

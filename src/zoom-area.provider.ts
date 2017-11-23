@@ -14,6 +14,9 @@ export class ZoomAreaProvider {
   private _scrollState = new Subject<any>();
   scrollState$ = this._scrollState.asObservable();
 
+  private _centerChanged = new Subject<any>();
+  centerChanged$ = this._centerChanged.asObservable();
+
   constructor () {} 
 
   notifyScroll (data) {
@@ -22,5 +25,9 @@ export class ZoomAreaProvider {
 
   notifyScrollState (data) {
     this._scrollState.next(data);
+  }
+
+  setCenter (x: number, y: number) {
+    this._centerChanged.next({x: x, y: y});
   }
 }

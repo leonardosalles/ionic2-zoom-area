@@ -96,6 +96,17 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
       });
 
       this._pinchZoom(this.zoom.nativeElement, this.content);
+
+      // Watch for user setCenter call
+      let self = this;
+      this.zoomAreaProvider.centerChanged$.subscribe(coords => {
+        if (self.zoomConfig.scale === 1) {
+          return;
+        }
+
+        self.setCoor(coords.x, coords.y);
+        self.transform(coords.x, coords.y);
+      });
     }
 
     zoomConfig = {
