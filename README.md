@@ -186,6 +186,13 @@ this.zoomAreaProvider.setCenter(20, 50);
 
 <br><br>
 
+## Known Issues 🤬
+- Vertical pan is in conflict with scroll event and are not fired like horizontal pan.
+
+
+
+<br><br>
+
 ## Roadmap
 - ✅(1.0.10) - Add support to move center of zoom
 
