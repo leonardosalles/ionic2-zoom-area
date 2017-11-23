@@ -47,6 +47,12 @@ npm i --save @angular/animations
 
 ## Import BrowserAnimationsModule in your app's module(s)
 ```ts
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+```
+
+And then
+
+```ts
 imports: [
   ...
   BrowserAnimationsModule,
