@@ -12,6 +12,9 @@ import { ZoomAreaProvider } from './zoom-area.provider';
   ],
   exports: [
     ZoomAreaComponent
+  ],
+  providers: [
+    ZoomAreaProvider
   ]
 })
 export class ZoomAreaModule {

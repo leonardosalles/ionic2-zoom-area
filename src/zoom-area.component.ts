@@ -1,6 +1,9 @@
-import { Component, ViewChild, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
+import {
+    Component, ViewChild, Input, Output, EventEmitter, OnChanges,
+    SimpleChanges, AfterViewInit, ViewEncapsulation, forwardRef } from '@angular/core';
+
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Gesture, Content } from 'ionic-angular';
+import { Gesture, Content, RootNode } from 'ionic-angular';
 import { ZoomAreaProvider } from './zoom-area.provider';
 
 @Component({
@@ -45,9 +48,16 @@ import { ZoomAreaProvider } from './zoom-area.provider';
     overflow: hidden;
   }
   `
+ ],
+ encapsulation: ViewEncapsulation.None,
+ providers: [
+   {
+     provide: RootNode,
+     useExisting: forwardRef(() => ZoomAreaComponent)
+   }
  ]
 })
-export class ZoomAreaComponent implements OnChanges, AfterViewInit {
+export class ZoomAreaComponent implements OnChanges, AfterViewInit, RootNode {
     @ViewChild('zoomAreaRoot') zoom;
     @ViewChild(Content) content: Content;
 
@@ -272,4 +282,13 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit {
     transform(xx?: number, yy?: number) {
       this.zoomRootElement.style.transform = `translate3d(${xx || this.zoomConfig.x}px, ${yy || this.zoomConfig.y}px, 0) scale3d(${this.zoomConfig.scale}, ${this.zoomConfig.scale}, 1)`;
     }
+
+    // needed since we're implementing RootNode
+    getElementRef() { return this.zoomRootElement; }
+  
+    // needed since we're implementing RootNode
+    initPane() { return true; }
+  
+    // needed since we're implementing RootNode
+    paneChanged() {}
 }
