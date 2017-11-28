@@ -1,3 +1,11 @@
+<a name="1.0.12"></a>
+## 1.0.12 (2017-11-28)
+
+### Bug Fixes
+
+* **Known Issue:**
+It fixes a known issue that prevent user to start vertical pan.
+
 <a name="1.0.11"></a>
 ## 1.0.11 (2017-11-23)
 

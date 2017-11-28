@@ -1,14 +1,17 @@
 zoom-area {
+    .scroll-content {
+        overflow: hidden !important;
+        touch-action: none !important;
+    }
+ 
     .zoom {
         width: 100% !important;
         height: 100% !important;
-        margin-bottom: 400px;
-        touch-action: pan-y !important;
-
-        div.fit {
-            width: 100% !important;
-            height: 100% !important;
-            touch-action: auto !important;
+        touch-action: none !important;
+        position: fixed;
+ 
+        * {
+            touch-action: none !important;
         }
     }
 
