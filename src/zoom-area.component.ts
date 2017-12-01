@@ -1,7 +1,4 @@
-import {
-    Component, ViewChild, Input, Output, EventEmitter, OnChanges,
-    SimpleChanges, AfterViewInit, ViewEncapsulation, forwardRef } from '@angular/core';
-
+import { Component, ViewChild, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Gesture, Content, RootNode } from 'ionic-angular';
 import { ZoomAreaProvider } from './zoom-area.provider';
@@ -11,7 +8,9 @@ import { ZoomAreaProvider } from './zoom-area.provider';
  template: `
     <ion-content>
       <div #zoomAreaRoot class="zoom" (click)="toggleZoomControls()">
-        <ng-content></ng-content>
+        <div class="fit">
+          <ng-content></ng-content>
+        </div>
       </div>
 
       <ion-fab right top [@visibilityChanged]="zoomControlsState">
@@ -36,16 +35,9 @@ import { ZoomAreaProvider } from './zoom-area.provider';
       transition('shown => hidden', animate('300ms')),
       transition('hidden => shown', animate('300ms')),
     ])
- ],
- encapsulation: ViewEncapsulation.None,
- providers: [
-   {
-     provide: RootNode,
-     useExisting: forwardRef(() => ZoomAreaComponent)
-   }
  ]
 })
-export class ZoomAreaComponent implements OnChanges, AfterViewInit, RootNode {
+export class ZoomAreaComponent implements OnChanges {
     @ViewChild('zoomAreaRoot') zoom;
     @ViewChild(Content) content: Content;
 
@@ -243,7 +235,7 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit, RootNode {
   
       this.zoomConfig.base = this.zoomConfig.scale;
       this.setBounds();
-      this.transform();
+      this.transform(); 
     }
   
     setBounds() {
@@ -263,20 +255,12 @@ export class ZoomAreaComponent implements OnChanges, AfterViewInit, RootNode {
     }
   
     setCoor(xx: number, yy: number) {
-      this.zoomConfig.x = Math.min(Math.max((this.zoomConfig.last_x + xx), this.zoomConfig.max_x), this.zoomConfig.min_x);
-      this.zoomConfig.y = Math.min(Math.max((this.zoomConfig.last_y + yy), this.zoomConfig.max_y), this.zoomConfig.min_y);
+      const compensation = this.zoomConfig.scale === 2 ? 1.05 : (this.zoomConfig.scale / 1.25);
+      this.zoomConfig.x = Math.min(Math.max((this.zoomConfig.last_x + xx), this.zoomConfig.max_x * compensation), this.zoomConfig.min_x * compensation);
+      this.zoomConfig.y = Math.min(Math.max((this.zoomConfig.last_y + yy), this.zoomConfig.max_y * compensation), this.zoomConfig.min_y * compensation);
     }
   
     transform(xx?: number, yy?: number) {
       this.zoomRootElement.style.transform = `translate3d(${xx || this.zoomConfig.x}px, ${yy || this.zoomConfig.y}px, 0) scale3d(${this.zoomConfig.scale}, ${this.zoomConfig.scale}, 1)`;
     }
-
-    // needed since we're implementing RootNode
-    getElementRef() { return this.zoomRootElement; }
-  
-    // needed since we're implementing RootNode
-    initPane() { return true; }
-  
-    // needed since we're implementing RootNode
-    paneChanged() {}
 }

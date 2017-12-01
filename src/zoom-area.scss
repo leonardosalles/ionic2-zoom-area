@@ -10,7 +10,7 @@ zoom-area {
         touch-action: none !important;
         position: fixed;
  
-        * {
+        .fit {
             touch-action: none !important;
         }
     }
