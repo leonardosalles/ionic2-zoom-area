@@ -4,6 +4,8 @@
 
 # A zoom area for Ionic 2
 
+IMPORTANT: Versions 1.0.12 and 1.0.13 will not work as expected, please use <1.0.11 or >1.0.14 instead.
+
 A zoom area component with pinch support to zoom any element in page
 
 To see this in action, checkout the [example project here](https://github.com/leonardosalles/ionic2-zoom-area-example).
