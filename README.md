@@ -4,7 +4,7 @@
 
 # A zoom area for Ionic 2
 
-IMPORTANT: Versions 1.0.12 and 1.0.13 will not work as expected, please use <1.0.11 or >1.0.14 instead.
+IMPORTANT: Versions 1.0.12 and 1.0.13 will not work as expected, please use <=1.0.11 or >=1.0.14 instead.
 
 A zoom area component with pinch support to zoom any element in page
 
