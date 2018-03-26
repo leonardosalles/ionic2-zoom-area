@@ -1,3 +1,11 @@
+<a name="1.0.16"></a>
+## 1.0.16 (2018-03-26)
+
+### Bug Fixes
+
+* **Known Issue:**
+[#10](https://github.com/leonardosalles/ionic2-zoom-area/issues/10) - Fixes the problem during --prod build with Ionic.
+
 <a name="1.0.12"></a>
 ## 1.0.12 (2017-11-28)
 
