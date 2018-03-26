@@ -1,6 +1,6 @@
 {
   "name": "ionic2-zoom-area",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "A zoom area component with pinch and pan support.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,15 +16,15 @@
   "license": "MIT",
   "repository": "https://github.com/leonardosalles/ionic2-zoom-area",
   "dependencies": {
-    "@angular/animations": "5.0.1",
-    "@angular/common": "5.0.1",
-    "@angular/compiler": "5.0.1",
-    "@angular/compiler-cli": "5.0.1",
-    "@angular/core": "5.0.1",
-    "@angular/forms": "5.0.1",
-    "@angular/http": "5.0.1",
-    "@angular/platform-browser": "5.0.1",
-    "@angular/platform-browser-dynamic": "5.0.1",
+    "@angular/animations": "5.1.3",
+    "@angular/common": "5.1.3",
+    "@angular/compiler": "5.1.3",
+    "@angular/compiler-cli": "5.1.3",
+    "@angular/core": "5.1.3",
+    "@angular/forms": "5.1.3",
+    "@angular/http": "5.1.3",
+    "@angular/platform-browser": "5.1.3",
+    "@angular/platform-browser-dynamic": "5.1.3",
     "conventional-changelog-cli": "^1.3.4",
     "ionicons": "3.0.0",
     "rxjs": "5.5.2",
@@ -32,6 +32,6 @@
     "ionic-angular": "3.9.2"
   },
   "devDependencies": {
-    "typescript": "2.4.2"
+    "typescript": "2.5.2"
   }
 }
