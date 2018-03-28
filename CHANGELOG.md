@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* **Known Issue:**
+* **AOT Compilation:**
 [#10](https://github.com/leonardosalles/ionic2-zoom-area/issues/10) - Fixes the problem during --prod build with Ionic.
 
 <a name="1.0.12"></a>
