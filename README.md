@@ -2,7 +2,7 @@
 [![npm](https://img.shields.io/npm/dt/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area)
 [![npm](https://img.shields.io/npm/dm/ionic2-zoom-area.svg)](https://www.npmjs.com/package/ionic2-zoom-area)
 
-# A zoom area for Ionic 2
+# A zoom area for Ionic 2 and 3 :)
 
 IMPORTANT: Versions 1.0.12 and 1.0.13 will not work as expected, please use <=1.0.11 or >=1.0.14 instead.
 
