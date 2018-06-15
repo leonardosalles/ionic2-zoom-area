@@ -205,3 +205,6 @@ this.zoomAreaProvider.setCenter(20, 50);
 
 ## Support this project
 If you find this project useful, please star the repo to let people know that it's reliable. Also, share it with friends and colleagues that might find this useful as well. Thank you :smile:
+
+## Special Thanks ##
+We would like to thank [JetBrains](http://www.jetbrains.com) for supporting this project by offering open-source license of their [IntelliJ IDE](http://www.jetbrains.com/idea/) to us.
