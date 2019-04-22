@@ -4,7 +4,7 @@
 
 # A zoom area for Ionic 2 and 3 :)
 
-THIS LIBRARY IS NOT MANTAINED ANYMORE, IF YOU WANT TO OWN THIS REPO PLEASE CONTACT ME.
+IMPORTANT: New release for Ionic 4 will be release here as a new Version of the core component.
 
 IMPORTANT: Versions 1.0.12 and 1.0.13 will not work as expected, please use <=1.0.11 or >=1.0.14 instead.
 
