@@ -1,3 +1,11 @@
+<a name="1.0.17"></a>
+## 1.0.17 (2019-04-22)
+
+### Feature
+
+* **New version:**
+Introduces the features to release a new version for a Ionic 4.
+
 <a name="1.0.16"></a>
 ## 1.0.16 (2018-03-26)
 
